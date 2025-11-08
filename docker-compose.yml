@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile
     environment:
       NODE_ENV: "production"
-      PORT: "3002"
+      PORT: "3000"    # Next.js usa SEMPRE la 3000 se non hai cambiato il server
     ports:
-      - "3002:3002"
+      - "3002:3000"
     volumes:
       - api-docenti:/app/data
     restart: unless-stopped
